@@ -1,0 +1,75 @@
+﻿@model Jumia.Models.User
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<body>
+    <form asp-action="login" asp-Controller="Auth" class="mb-5">
+        <div class="container mt-5">
+            <div class="row mb-5">
+                <div class="col-6 col-md-6">
+                    <input type="text" name="Fullname" class="form-control shape p-3" placeholder="Fullname" required />
+                </div>
+                <div class="col-6 col-md-6">
+                    <input type="password" name="Password" class="form-control shape p-3" id="password" placeholder="Use a Strong password" required />
+                    <div class=" text-center">
+                        <input type="checkbox" onclick="togglePassword()" class="mt-3"> Show Password
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-6 col-md-6">
+                    <input type="number" name="PNumber" class="form-control shape p-3" placeholder="Phone number" required />
+                </div>
+                <div class="col-6 col-md-6">
+                    <input type="email" name="Email" class="form-control shape p-3" placeholder="(Optional) Email" />
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-6 col-md-6">
+                    <label style="padding-left:1%; position:absolute">Date of birth</label>
+                    <input type="date" name="DOB" class="form-control shape p-3" required />
+                </div>
+                <div class="col-6 col-md-6">
+                    <input type="text" name="State" class="form-control shape p-3" placeholder="State of Origin" required />
+                </div>
+                <div class="col-6 col-md-6 mt-4">
+                    <label>Gender</label>
+                    <input type="radio" name="Gender" required />  Male
+                    <input type="radio" name="Gender" required />  Female
+
+                </div>
+            </div>
+            <div style="top:15%">
+
+                <input type="checkbox" required />
+                <label> I agree with all terms and privacy of ChrisBank Ltd Company. </label>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-dark btn-outline-secondary p-3 text-white form-control shape mt-5 half mb-3 " type="submit">
+                    Submit
+                </button>
+
+            </div>
+
+        </div>
+    </form>
+
+    <form asp-action="Login" asp-Controller="Auth" method="post" class="text-center mb-5">
+        <label class="text-center" style="text-align:center"> Already Have an Account! Click on the button below</label>
+        <div class="text-center">
+            <button class="btn btn-dark btn-outline-secondary p-3 text-white form-control shape  half mb-5 " type="submit">
+                Login
+            </button>
+        </div>
+    </form>
+
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            passwordField.type = passwordField.type === "password" ? "text" : "password";
+        }
+    </script>
+</body>

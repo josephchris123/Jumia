@@ -1,0 +1,121 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+/* Banner (Placeholder) */
+.banner {
+    background-color: #f28c38;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+}
+
+/* Gallery Container */
+.gallery-container {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+
+}
+
+.gallery {
+    display: inline-flex;
+    gap: 12px;
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 130px;
+    background: #f9f9f9;
+}
+.image {
+}
+.gallery-item img {
+    width: 100%;
+    height: 70%;
+    object-fit:contain;
+    border-radius: 0.4em;
+}
+
+.gallery-container::-webkit-scrollbar {
+    display: none;
+}
+
+.half{
+    width:50%
+}.full{
+    width:100%
+}
+ .button{
+    width: 8.5%;
+    border-radius:0.4em;
+    border:hidden;
+ }
+ .orange{
+     background-color:darkorange;
+ }
+.sidebar {
+    width: 200px;
+    background-color: white;
+    border-radius: 9px;
+}
+
+    .sidebar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
+    .size{
+        font-size:smaller;
+    }
+        .sidebar ul li {
+           
+            margin: 3px ;
+            border-radius: 5px;
+        }
+
+.timer {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    border-radius:0.3em;
+    margin-left:0em;
+}
+.hover-image {
+    width: 100px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.image-container:hover .hover-image {
+    transform: scale(1.2); /* Scales the image up by 10% on hover */
+    opacity: 0.8; /* Slightly reduces opacity on hover */
+}

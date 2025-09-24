@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Jumia.Models.User
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<body class="text-center">
+    <h1 class="text-black mb-5 text-center mt-4">Your Transactions Await's...</h1>
+    <form asp-action="dashboard" asp-controller="User">
+        <div class="row">
+            <div class="col-md-6 col-6 text-center">
+                <input type="text" name="FullName" placeholder="Full Name" class="form-control full shape p-3 " required />
+            </div>
+            <div class="col-md-6 col-6 text-center">
+                <input type="password" name="Password" placeholder="Password" id="password" class="form-control full shape p-3" required />
+                <input type="checkbox" onclick="togglePassword()" class="mt-3"> Show Password
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button class=" btn btn-dark btn-outline-secondary orange p-3 text-white form-control shape mt-5 half mb-3 " type="submit">
+                Login
+            </button>
+        </div>
+    </form>
+    <form asp-action="registration" asp-Controller="Auth" method="post">
+        <label class="text-center"><a> New Here! Click on the button below</a></label>
+        <div class="text-center">
+            <button class="btn btn-dark btn-outline-secondary orange p-3 text-white form-control shape  half mb-5 " type="submit">
+                Create Account
+            </button>
+        </div>
+    </form>
+
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            passwordField.type = passwordField.type === "password" ? "text" : "password";
+        }
+    </script>
+</body>

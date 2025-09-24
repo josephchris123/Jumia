@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Jumia</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Jumia.styles.css" asp-append-version="true" />
+</head>
+<body style="background-color:mediumorchid">
+    <header class=" col-12 col-md-12 " >
+        <div class="container"> 
+            <img src="~/images/Header.gif" style="width:100%;">
+        </div>
+    </header>
+    <div style="background-color:lavender">
+        <div class="container">
+            <a asp-action="" asp-controller="" class="text-decoration-none" >
+                <span>
+
+                    <h7 style="color:darkorange;" class="mt-2 mb-4 ">Sell on Jumia</h7>
+                </span>
+            </a>
+            <span style="margin-bottom:13em">
+                <strong class="mb-3" style="margin-left:20em; ">Jumia</strong>
+
+            </span>
+        </div>
+     
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light  box-shadow mb-3 bg-white">
+        <div class="container-fluid mb-2">
+            <div class="container-fluid text-center" style="text-align:center">
+                <form class="d-flex mt-2" style="margin-left:16em" >
+                    <input class="form-control me-3 half p-3  col-6 col-md-6 " type="search" placeholder="Search products, brands and categories" aria-label="Search" style="width:60%" required />
+                    <button class="text-white button " style="background-color:darkorange" type="submit"><strong>Search</strong></button>
+                </form>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1 ">
+                    <li class="nav-item" >
+                        <a class="nav-link " style="color:gray" asp-area="" asp-controller="Home" asp-action="Index"><h5>Account</h5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " style="color:gray" asp-area="" asp-controller="Home" asp-action="Index"><h5>Help</h5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " style="color:gray" asp-area="" asp-controller="Home" asp-action="Index"><h5>Cart</h5></a>
+                    </li>
+               
+                </ul>
+            
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - Jumia - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
